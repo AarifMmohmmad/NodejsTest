@@ -1,0 +1,8 @@
+
+nodejs me module inport krne ke trike
+1. CommonJS Require: CommonJS, Node.js ka default module system hai. Aap require function ka upyog karke modules ko import kar sakte hain. Example:
+
+const fs = require('fs');
+
+2. ES module . hm import statement ka upyog karke modules ko import kar sakte hain. 
+ import fs from 'fs';

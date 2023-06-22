@@ -8,7 +8,7 @@ Request Body : yes
 Request Headers : No 
 Response Headers  :Content Type : application/json
 
-when Respnose Code is 
+when Respnose Code is 200
 request Body : {
     id : 1,
     Name :" aarif mohammad",
@@ -19,7 +19,15 @@ request Body : {
 }
 Response Body : {
       status : true ,
-      massage : student addmission sucessfully
+      massage : "student addmission sucessfully"
+      data : {
+    id : 1,
+    Name :" aarif mohammad",
+    class : 12
+    age : 17,
+    mobile : 12345,
+    address : "jaipur",
+}
 }
 when Response Code is 404 API not Found
 Response Body {
@@ -80,9 +88,10 @@ Path Param : No,
 Request Body : No,
 Responce Body : yes,
 Response Headers  :Content Type : application/json
+
 Response Body :
     status : true ,
-    massage : student data get successfully
+    massage : "student data get successfully"
     data : {
     id : 1,
     name : "Aarif",
@@ -268,7 +277,7 @@ Response Body{
     statusCode : 500
 }
 ```
-Api to get all batch details 
+#### Question 9. Api to get all batch details 
 ```sql
 URL : www.wecodeacademy.in/api/v1/betch
 Method type : GET,
@@ -305,7 +314,7 @@ Response Body{
     statusCode : 500
 }
 ```
-#### Question 9. Api to get batch details by batchName
+#### Question 10. Api to get batch details by batchName
 ```sql
 URL : www.wecodeacademy.in/api/v1/betch/batchName 
 Method type : GET,
@@ -335,12 +344,12 @@ Response Body{
     statusCode : 500
 }
 ```
-#### Question 10 . Api to update student Data 
+#### Question 11 . Api to update student Data 
 ```sql
 URL : www.wecodeacademy.in/api/v1/student
 Method type : put,
 Request Param : No ,
-Path Param : Yes,
+Path Param : No,
 Request Body : yes,
 Responce Body : No,
 Request Headers : No 
@@ -382,11 +391,11 @@ Response Body{
 URL : www.wecodeacademy.in/api/v1/teaacher
 Method type : put,
 Request Param : No ,
-Path Param : Yes,
+Path Param : NO,
 Request Body : yes,
 Responce Body : No,
 Request Headers : No 
-Response Headers  :Content Type : application/json
+Response Headers  :Content Type :Yes application/json
 
 Request Body :{
     id : 1,
@@ -500,9 +509,9 @@ Response Body{
 ```
 #### Question 13. Api to delete batch 
 ```sql
-URL : www.wecodeacademy.in/api/v1/Betch?id=3
+URL : www.wecodeacademy.in/api/v1/Betch
 Method Type : Delet
-Request Param : yes
+Request Param : no
 Path Param : No
 Request Body : yes
 Request Headers : No 

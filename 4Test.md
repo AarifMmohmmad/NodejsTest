@@ -3,14 +3,13 @@
 URL : www.wecodeacademy.in/api/v1/student
 Method Type : post
 Request Param : No 
-Path Param : yes
+Path Param : NO
 Request Body : yes
-Request Headers : No 
+Request Headers : yes 
 Response Headers  :Content Type : application/json
 
 when Respnose Code is 200
 request Body : {
-    id : 1,
     Name :" aarif mohammad",
     class : 12
     age : 17,
@@ -60,7 +59,7 @@ Response Body :[ {
     address : "Jaipur",
 },
 {
-    id : 1,
+    id : 2,
     name : "Aarif",
     class : 12
     age : 17
@@ -81,10 +80,10 @@ Response Body{
 ```
 #### question 3 . Api to get student detail by id 
 ```sql
-URL : www.wecodeacademy.in/api/v1/student?id=3
+URL : www.wecodeacademy.in/api/v1/student/id
 Method type : GET,
-Request Param : Yes ,
-Path Param : No,
+Request Param : no ,
+Path Param : yes,
 Request Body : No,
 Responce Body : yes,
 Response Headers  :Content Type : application/json
@@ -180,7 +179,7 @@ Response Body{
 URL : www.wecodeacademy.in/api/v1/teacher
 Method type : GET,
 Request Param : NO ,
-Path Param : Yes,
+Path Param : no,
 Request Body : No,
 Responce Body : yes,
 Response Headers  :Content Type : application/json
@@ -248,7 +247,7 @@ Response Body{
 ```
 #### Question 8. Api to get teacher details by name 
 ```sql
-URL : www.wecodeacademy.in/api/v1/teacher&name=sajid ali khan
+URL : www.wecodeacademy.in/api/v1/teacher?name=sajid ali khan
 Method type : GET,
 Request Param : Yes ,
 Path Param : No,
@@ -289,6 +288,7 @@ Response Headers  :Content Type : application/json
 
 
 Response Body :[{
+    id:1
     Batch : "nodejs" ,
     teacher : "sajid ali khan",
     startDate : 21 jan 2023,
@@ -296,6 +296,7 @@ Response Body :[{
     TotelStudent :14
 },
 {
+    id:2
     Batch : "Design" ,
     teacher : "Asfak khan",
     startDate : 21 jun 2023,
@@ -316,7 +317,7 @@ Response Body{
 ```
 #### Question 10. Api to get batch details by batchName
 ```sql
-URL : www.wecodeacademy.in/api/v1/betch/batchName 
+URL : www.wecodeacademy.in/api/v1/betch?batchName=nodejs
 Method type : GET,
 Request Param : No ,
 Path Param : Yes,
@@ -388,7 +389,7 @@ Response Body{
 ```
 #### Question 11 .Api to add teacher salary 
 ```sql
-URL : www.wecodeacademy.in/api/v1/teaacher
+URL : www.wecodeacademy.in/api/v1/teaacher/salary
 Method type : put,
 Request Param : No ,
 Path Param : NO,

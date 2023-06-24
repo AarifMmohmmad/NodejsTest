@@ -20,7 +20,11 @@ try {
 // nodejs4
 // nodejs5"]
 
-for(let i = 0 ; i <=12000000;i++){
-console.log(i);
 
-}
+
+let num = "234567898989"
+
+START=num.slice(0,3)
+END = num.slice(7,10)
+console.log(START.padEnd(7,"*").concat(END));
+

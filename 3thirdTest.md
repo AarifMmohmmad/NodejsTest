@@ -64,22 +64,29 @@ for(let i = 0 ; i<filess.length;i++){
 ```
 #### Question 6.Ab Nodejs folder ke andar jitne b folders hain sirf unhe hi print krvana hai 
 ```sql
+const checkfolders= fs.readdirSync("Nodejs")
+.map(fileName => {
+  return path.join("Nodejs", fileName);
+})
+.filter(fileName => {
+  return fs.lstatSync(fileName).isDirectory();
+});
+
+console.log(checkfolders); 
 
 ```
 #### Question 7.Ab Nodejs folder ke andar jitni b files hain sirf unhe hi print krvana hai 
-```sql
-const isFile = fileName => {
-    return fs.lstatSync(fileName).isFile();
-  };
-  
+```sql 
 
- const fff= fs.readdirSync("Nodejs")
-    .map(fileName => {
-      return path.join("Nodejs", fileName);
-    })
-    .filter(isFile);
+const checkfile= fs.readdirSync("Nodejs")
+.map(fileName => {
+  return path.join("Nodejs", fileName);
+})
+.filter(fileName => {
+  return fs.lstatSync(fileName).isFile();
+});
 
-    console.log(fff); 
+console.log(checkfile);
 ```
 #### Question 8.Ab tume Nodejs folder ke andar jitne b folders hain unke andar 1-1 file create krni hai file1.html 
 ```sql
@@ -127,6 +134,15 @@ fs.writeFileSync("Nodejs/file4.html" , data)
 #### Question 11.file5.html ko copy krna hai but nodejs2 folder ke andar 
 ```sql
 
+[Error: ENOENT: no such file or directory, copyfile 'file5.html' -> 'node2/'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'copyfile',
+  path: 'file5.html',
+  dest: 'node2/'
+}
+
+folder ke ander aap file copy nhi kr skte he 
 ```
 #### Question 12.nodejs3, nodejs4, nodejs5 folder ko delete kr dena hai 
 ```sql
@@ -144,4 +160,12 @@ for(let i = 0 ; i < deletfolder.length ; i++){
 ```
 #### Question 13.nodejs1 folder ke andar jo b files hain unhe copy krke nodejs2 folder me dal dena hai
 ```sql
+fs.copyFile("Nodejs/nodejs1/file1.html","Nodejs/nodejs2/file1.html",(err)=>{
+  if(err){
+    console.log(err);
+  }else{
+    console.log("success");
+  }
+})
+
 ```

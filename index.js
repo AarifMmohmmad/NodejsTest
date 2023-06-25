@@ -3,7 +3,7 @@ console.log((19 < 29) + 20);
 
 
 const fs = require("fs")
-
+const path = require("path")
 const folderName = 'nodejs';
 
 try {
@@ -22,9 +22,8 @@ try {
 
 
 
-let num = "234567898989"
+// let num = "234567898989"
 
-START=num.slice(0,3)
-END = num.slice(7,10)
-console.log(START.padEnd(7,"*").concat(END));
-
+// START=num.slice(0,3)
+// END = num.slice(7,10)
+// console.log(START.padEnd(7,"*").concat(END));

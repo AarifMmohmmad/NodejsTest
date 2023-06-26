@@ -72,12 +72,12 @@ Node.js ke kuch pramukh features niche diye gaye hain:
 These are some of the key features of Node.js that have contributed to its popularity and success as a platform for server-side development.
 
 ```
-5. File System module ka kya use hai ?
+#### 5. File System module ka kya use hai ?
 ```
 
 fs (File System) module Node.js ka ek built-in module hai, jise file aur directory ke sath sambandhit operations karne ke liye use kiya jata hai. Is module ka upyog karke aap file create, read, write, update, delete aur directory ke sath operations jaise ki create, read, write, delete, move, etc. kar sakte hain.
 ```
-6. Encoding kya hoti hai ? UTF-8 encoding ke bare me btayen 
+#### 6. Encoding kya hoti hai ? UTF-8 encoding ke bare me btayen 
 ```
 Encoding ek process hai jisme characters aur symbols ko machine-readable form me represent kiya jata hai. Is process me characters ko binary (0s aur 1s) form me convert kiya jata hai, jise computer samajh sakta hai. Encoding ki madad se text, audio, video, images, aur anya data ko computer systems me store, transmit aur process kiya ja sakta hai.
 
@@ -86,23 +86,68 @@ UTF-8 --
   . internationalization aur multilingual content ko support karta hai.
   .  Isme sabhi major languages ke characters, symbols aur diacritical marks ko represent karne ke liye flexibility hai
 ```
-7. Absolute and Relative path me kya differences hain 
+#### 7. Absolute and Relative path me kya differences hain 
 ```
 
 A relative path describes the location of a file relative to the current (working) directory*.
 
 An absolute path describes the location from the root directory
+
+absolute paths provide the complete location from the root of the file system, while relative paths specify the location relative to the current working directory. Absolute paths are fixed and unambiguous, while relative paths are context-dependent and can change depending on the current working directory.
 ```
-8. File and Folder me kya differnce hai ?
-```
-bhut sari file milker ak folder ka nirman krte he 
-```
-9.  Differnce between callback and promise. Explain with example
-```
+#### 8. File and Folder me kya differnce hai ?
+```sql
+
+
+files represent individual units of data, while folders/directories are used to organize and manage those files within a file system.
+
 
 ```
-10. readFile and readFileSync me kya differences hain? Explain with example
+#### 9.  Differnce between callback and promise. Explain with example
+```sql
+promise - To manage asynchronous actions in JavaScript, promises are used
+      It is an assurance that something will be done. The promise is used to keep track of whether 
+      the asynchronous event has been executed or not and determines what happens after the event 
+      has occurred.
+It may create callback hell.	
+
+
+callbacks - Callbacks are a great approach to dealing with something once another task has been 
+    finished. Here, “something” refers to the execution of a function. Callbacks can be utilized 
+    if wewish to run a function immediately following the return of another function.
+
+
+
+
+Callbacks are functions passed as arguments into other functions to make sure mandatory variables are available within the callback-functions scope. 
+ Promises are placeholder objects for data thats available in the future.
 ```
+#### 10. readFile and readFileSync me kya differences hain? Explain with example
+```sql
+
+
+ readFile and readFileSync are two different methods used to read the contents of a file.
+
+
+ .. readfile - The readFile method is asynchronous, which means it does not block the execution of other code while reading the file
+
+     it takes a callback function as an argument, which is executed once the file reading operation is complete. 
+   fs.readFile('readingfile', 'encoding', (err, data) => {})
+
+
+
+.. readFileSync - the readFileSync method is synchronous, which means it blocks the execution of other code until the file reading operation is finished. I
+
+   const data = fs.readFileSync('file.txt', 'utf8');
+
+
+
+note - t readFile is asynchronous and uses a callback function to handle the file contents, allowing non-blocking execution of other code. On the other hand, readFileSync is synchronous and directly returns the file contents, blocking the execution until the reading operation is finished.
+
 
 ```
-11.  writeFile and writeFileSync me kya differences hain? Explain with example
+#### 11.  writeFile and writeFileSync me kya differences hain? Explain with example
+```sql
+
+
+```
